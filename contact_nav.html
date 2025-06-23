@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اتصل بنا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial; direction: rtl; padding: 20px; background: #f4f4f4; }
+        h1 { text-align: center; }
+        form { max-width: 400px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #006f7a; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #004f57; }
+    </style>
+</head>
+<body>
+
+<nav style="background-color:#006f7a; padding:10px; text-align:center;">
+    <a href="index.html" style="color:white; margin: 0 15px; text-decoration:none;">🏠 الرئيسية</a>
+    <a href="checkout.html" style="color:white; margin: 0 15px; text-decoration:none;">💳 الدفع</a>
+    <a href="contact.html" style="color:white; margin: 0 15px; text-decoration:none;">📩 اتصل بنا</a>
+</nav>
+
+    <h1>اتصل بنا</h1>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="الاسم" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <textarea placeholder="رسالتك" rows="5" required></textarea>
+        <button type="submit">إرسال</button>
+    </form>
+
+    <script type="text/javascript">
+        function sendMessage(e) {
+            e.preventDefault();
+            alert("تم إرسال الرسالة (وهميًا)");
+            omnisend.push(["track", "ContactFormSubmitted"]);
+        }
+
+        window.omnisend = window.omnisend || [];
+        omnisend.push(["brandID", "68587f0edd682116e9c7b53a"]);
+        omnisend.push(["track", "$pageViewed"]);
+        !function(){var e=document.createElement("script");
+        e.type="text/javascript",e.async=!0,
+        e.src="https://omnisnippet1.com/inshop/launcher-v2.js";
+        var t=document.getElementsByTagName("script")[0];
+        t.parentNode.insertBefore(e,t)}();
+    </script>
+</body>
+</html>
